@@ -2,7 +2,6 @@
 $(function () {
   $(".delburger").on("click", function (event) {
     var id = $(this).data("burgerid");
-    // var Devoured = $(this).data("devoured");
     var Devoured = true
     var newState = {
       devoured: Devoured

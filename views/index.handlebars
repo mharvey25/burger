@@ -1,41 +1,40 @@
 <div id="burger">
-<img src="assets/img/hamburger.png" alt="burger">
-<h1>Eat-Da-Burger!</h1>
+  <img src="assets/img/hamburger.png" alt="burger">
+  <h1>Eat-Da-Burger!</h1>
 </div>
 
 <div id="toEat">
-<h2>burgers ready to eat</h2>
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-  <p>
-    {{this.id}}. {{this.burger_name}}
-    <button data-burgerid="{{this.id}}" class="delburger">Devour it!</button>
-  </p>
-  {{/unless}}
-  {{/each}}
-</ul>
+  <h2>burgers ready to eat</h2>
+  <ul>
+    {{#each burgers}}
+    {{#unless devoured}}
+    <p>
+      {{this.id}}. {{this.burger_name}}
+      <button data-burgerid="{{this.id}}" class="delburger">Devour it!</button>
+    </p>
+    {{/unless}}
+    {{/each}}
+  </ul>
 </div>
 
 <div id="eaten">
-<h2>devoured burgers</h2>
-<ul>
-  {{#each burgers}}
-  {{#if devoured}}
-  <p>
-    {{this.id}}. {{this.burger_name}}
-  </p>
-  {{/if}}
-  {{/each}}
-</ul>
+  <h2>devoured burgers</h2>
+  <ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    <p>
+      {{this.id}}. {{this.burger_name}}
+    </p>
+    {{/if}}
+    {{/each}}
+  </ul>
 </div>
 
 <form class="create-form">
   <div class="form-group">
     <label for="bn"></label>
     <input type="text" id="bn" name="name">
-  <button type="submit">Submit</button>
-  <h4>Enter a burger you want to eat and then "click" the submit button!</h4>
+    <button type="submit">Submit</button>
+    <h4>Enter a burger you want to eat and then "click" the submit button!</h4>
   </div>
 </form>
-
